@@ -3,7 +3,9 @@ import styles from "../Components.module.css"
 
 const HomeBody = () => {
   return (
-    <div className={styles.HomeBody}>
+    <div
+    className={styles.fundo}>
+      <div className={styles.HomeBody}>
         <iframe
           src="https://www.youtube.com/embed/FK6Uctz8_VQ?autoplay=1&mute=1&vq=hd1080&loop=1&playlist=FK6Uctz8_VQ"
           title="Vídeo de introdução SENAI"
@@ -27,7 +29,7 @@ const HomeBody = () => {
             <input type="text" placeholder="Login"/>
             <input type="password" name="" id="" placeholder="Senha"/>
             <button type="button">Entrar</button>
-            <a href="#">Cadastre-se</a>
+            <a href="/cadastro">Cadastre-se</a>
           </form>
           <div 
           className={styles.FormSobreSiteDesktop}>
@@ -59,6 +61,7 @@ const HomeBody = () => {
           <h1>Sobre o site</h1>
           <p>Este site foi desenvolvido com o objetivo de apresentar o SENAI — uma das maiores instituições de educação profissional do Brasil — de forma clara, acessível e interativa. Aqui, você encontra informações sobre a história do SENAI, sua missão, sua contribuição para a indústria brasileira e, principalmente, sobre as diversas oportunidades de formação técnica e profissional que a instituição oferece.</p>
         </div> 
+      </div>
     </div>
   )
 }

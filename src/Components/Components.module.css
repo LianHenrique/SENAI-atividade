@@ -134,7 +134,7 @@
       }
 
       & button:hover{
-        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.3);
       }
   
       & a{
@@ -174,17 +174,21 @@
 
 @media (min-width: 1000px) {
   .HomeBody {
-    flex-direction: column;
-    align-items: center;
+    background-color: #ffffffcc; /* fundo levemente translúcido */
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
     & iframe{
-      width: 60%;
-      margin: 10px 0;
+      width: 100%;
+      margin-top: 150px;
       height: 530px;
     }
 
     & .TxtBemVindo{
-      max-width: 60%;
+      max-width: 100%;
       & p{
         margin-top: 20px;
         text-align: justify;
@@ -205,7 +209,7 @@
     }
 
     & .Form{
-      width: 60%;
+      width: 100%;
       & form{
         gap: 20px;
         width: 100%;
@@ -333,7 +337,7 @@
 @media (min-width: 1000px) {
   .CardCurso{
     overflow-x: auto;
-    max-width: 60%;
+    max-width: 100%;
   }
 }
 
@@ -349,15 +353,16 @@
     display: block;
     unicode-bidi: isolate;
     & .pDesc{
-      margin-left: 485px;
+      margin-left: 420px;
       padding-top: 200px;
-      padding-right: 75px;
+      padding-right: 20px;
+      margin-bottom: 70px;
       unicode-bidi: isolate;
       text-align: justify;
     }
     & iframe{
-      margin-left: 75px;
-      margin-top: 200px;
+      margin-left: 10px;
+      margin-top: 250px;
       width: 400px;
       height: 225px;
       border-radius: 5px;
@@ -370,13 +375,13 @@
     color: rgb(255, 255, 255);
     padding: 15px;
     border-radius: 5px;
-    margin: 20px 75px;
+    margin: 20px 10px;
     font-size: 25px;
   }
 
   & .pHist{
     text-align: justify;
-    margin: 0 70px;
+    margin: 0 20px;
 
     & a{
       color: black;
@@ -384,4 +389,200 @@
 
   }
 
+}
+
+@media (min-width: 1000px) {
+  .fundo {
+    background: url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg") center/contain no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  .HistoryBody {
+    background-color: #ffffffcc; /* leve transparência opcional */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .pHist {
+      text-align: justify;
+      margin-bottom: 20px;
+
+      a {
+        color: #333;
+      text-decoration: underline;
+      }
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      .pDesc {
+        margin: 0 10px;
+        padding-top: 10px;
+        text-align: justify;
+        margin-bottom: 20px;
+      }
+
+      iframe {
+        width: 100%;
+        margin-top: 150px;
+        height: 530px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .HistoryBody{
+    & div{
+      display: flex;
+      flex-direction: column;
+      & .pDesc{
+        margin-left: 5%;
+        padding-top: 5%;
+        padding-right: 5%;
+        margin-bottom: 10px;
+        unicode-bidi: isolate;
+        text-align: justify;
+      }
+      & iframe{
+        margin: 0 10px;
+        margin-top: 170px;
+        width: 95%;
+        height: 225px;
+        border-radius: 5px;
+        float: left;
+      }
+    }
+  }
+}
+
+.CadastroBody{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  & form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+    width: auto;
+    background-color: #45BFD6;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+
+    & input{
+      height: 50px;
+      width: 500px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+      font-size: 25px;
+      padding: 0 10px;
+    }
+
+    & .cadastrar{
+      height: 50px;
+      width: 350px;
+      border: none;
+      border-radius: 5px;
+      background-color: #F3AB15;
+      font-size: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+      margin-top: 30px;
+    }
+
+    & .cadastrar:hover{
+      box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    & .cancelar{
+      height: 50px;
+      width: 350px;
+      border: none;
+      border-radius: 5px;
+      background-color: #FB5909;
+      font-size: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    & .cancelar:hover{
+      box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    & .Number{
+      display: flex;
+      gap: 10px;
+
+      & .ddd{
+        width: 75px;
+      }
+
+      & .telefone{
+        width: 395px;
+      }
+
+    }
+
+  }
+
+}
+
+@media (min-width: 1000px) {
+  .CadastroBody{
+    & form{
+      & input{
+        
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .CadastroBody{
+    & form{
+      margin-top: 200px;
+      width: 80%;
+      & input{
+        width: 100%;
+      }
+      & .cadastrar{
+        width: 100%;
+      }
+  
+      & .cancelar{
+        width: 100%;
+      }
+  
+      & .Number{
+        width: 100%;
+        & .ddd{
+          width: 25%;
+        }
+  
+        & .telefone{
+          width: 100%;
+        }
+  
+      }
+    }
+  }
 }
