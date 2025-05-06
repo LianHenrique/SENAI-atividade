@@ -56,6 +56,11 @@
   }
 }
 
+.cabecalho{
+  position: fixed;
+  width: 100%;
+}
+
 .HomeBody {
   display: flex;
   flex-wrap: wrap;
@@ -68,6 +73,7 @@
     width: 80%;
     height: 411px;
     border-radius: 5px;
+    margin-top: 150px;
   }
 
   & .TxtBemVindo{
@@ -86,7 +92,7 @@
       padding: 15px;
       border-radius: 5px;
       margin-bottom: 5px;
-      font-size: 20px;
+      font-size: 25px;
     }
   }
 
@@ -96,8 +102,7 @@
     gap: 20px;
 
     & form{
-      display: flex;
-      flex-direction: column;
+      display: grid;
       background-color: rgb(69, 191, 214);
       border: none;
       width: 40%;
@@ -114,6 +119,7 @@
         height: 50px;
         padding-left: 10px;
         font-size: 20px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
       }
 
       & button{
@@ -121,9 +127,10 @@
         border-radius: 5px;
         height: 50px;
         background-color: #F3AB15;
-        font-size: 20px;
+        font-size: 25px;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
         cursor: pointer;
+        font-weight: bold;
       }
 
       & button:hover{
@@ -153,8 +160,9 @@
     & h1{
       background-color: #20298F;
       color: white;
-      padding: 5px;
+      padding: 15px;
       border-radius: 5px;
+      font-size: 25px;
     }
   }
 
@@ -185,28 +193,30 @@
       }
     
       & h1{
-        padding: 5px;
         margin-bottom: 5px;
       }
+    }
+
+    & .FormSobreSiteDesktop{
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
     }
 
     & .Form{
       width: 60%;
       & form{
-        width: 40%;
+        gap: 20px;
+        width: 100%;
+        padding: 30px;
       }
-    }
-
-    & .FormSobreSiteMobile{
-      display: none;
     }
   }
 }
 
 @media (max-width: 768px) {
   .HomeBody {
-    flex-direction: column;
-    align-items: center;
 
     & iframe{
       width: 100%;
@@ -224,7 +234,8 @@
       }
     
       & h1{
-        padding: 5px;
+        padding: 15px;
+        font-size: 20px;
         margin-bottom: 5px;
       }
     }
@@ -243,17 +254,134 @@
 
     & .FormSobreSiteMobile{
       padding: 20px 0;
-      display: flex;
-      flex-direction: column;
+      display: grid;
 
       & h1{
         background-color: #20298F;
         color: white;
-        padding: 5px;
+        padding: 15px;
         border-radius: 5px;
+        font-size: 20px;
         margin: 20px 0;
       }
     }
 
   }
+}
+
+.CardCurso{
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  width: fit-content;
+  display: flex;
+  max-width: 80%;
+  border-radius: 5px;
+  gap: 10px;
+  scrollbar-color: #4b4b4b transparent;
+
+  & form{
+    background-color: rgb(69, 191, 214);
+    border: none;
+    min-height: 400px;
+    border-radius: 5px;
+    padding: 20px;
+    color: black;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+
+    & div{
+      white-space: wrap;
+    }
+
+    & button{
+      width: 100%;
+      height: 50px;
+      font-size: 25px;
+      font-weight: bold;
+      background-color: #F3AB15;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+      margin: 10px 0;
+      min-width: 300px;
+    }
+  
+    & p{
+      margin: 10px 0;
+      font-size: 15px;
+      text-align: justify;
+    }
+  
+    & h2{
+      font-size: 25px;
+    }
+  
+    & img{
+      margin: 10px 0;
+      width: 100%;
+      border-radius: 5px;
+    }
+  
+  }
+}
+
+@media (min-width: 700px) {
+  .CardCurso{
+    overflow-x: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .CardCurso{
+    overflow-x: auto;
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .CardCurso{
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
+
+.HistoryBody{
+  & div{
+    display: block;
+    unicode-bidi: isolate;
+    & .pDesc{
+      margin-left: 485px;
+      padding-top: 200px;
+      padding-right: 75px;
+      unicode-bidi: isolate;
+      text-align: justify;
+    }
+    & iframe{
+      margin-left: 75px;
+      margin-top: 200px;
+      width: 400px;
+      height: 225px;
+      border-radius: 5px;
+      float: left;
+    }
+  }
+
+  & h1{
+    background-color: #20298F;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 75px;
+    font-size: 25px;
+  }
+
+  & .pHist{
+    text-align: justify;
+    margin: 0 70px;
+
+    & a{
+      color: black;
+    }
+
+  }
+
 }

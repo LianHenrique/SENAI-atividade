@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router"
 import Home from "./Pages/Home/Home"
 import Cadastro from "./Pages/Cadastro/Cadastro"
 import Historia from "./Pages/Hitoria/Historia"
-import InitApp from "./InitApp"
+import InitApp from "./Pages/InitApp"
 
 const Routes = createBrowserRouter([
     {
