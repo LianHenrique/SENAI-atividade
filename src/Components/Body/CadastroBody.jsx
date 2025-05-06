@@ -9,6 +9,7 @@ const CadastroBody = () => {
     <div 
     className={styles.CadastroBody}>
         <form action="">
+            <h1>Cadastro</h1>
             <input type="text" placeholder="Nome completo"/>
             <input type="text" placeholder="E-mail"/>
             <input type="passord" placeholder="Senha"/>

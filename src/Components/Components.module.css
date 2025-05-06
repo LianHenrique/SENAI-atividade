@@ -224,7 +224,6 @@
 
     & iframe{
       width: 100%;
-      margin: 10px 0;
       height: 200px;
     }
 
@@ -362,7 +361,7 @@
     }
     & iframe{
       margin-left: 10px;
-      margin-top: 250px;
+      margin-top: 200px;
       width: 400px;
       height: 225px;
       border-radius: 5px;
@@ -391,12 +390,7 @@
 
 }
 
-@media (min-width: 1000px) {
-  .fundo {
-    background: url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg") center/contain no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-  }
+@media (min-width: 900px) {
 
   .HistoryBody {
     background-color: #ffffffcc; /* leve transparência opcional */
@@ -433,9 +427,9 @@
       }
 
       iframe {
-        width: 100%;
-        margin-top: 150px;
-        height: 530px;
+        width: 90%;
+        margin: 150px auto 0;
+        height: 430px;
       }
     }
   }
@@ -472,11 +466,17 @@
   align-items: center;
   height: 100vh;
 
+  & h1{
+    font-size: 45px;
+    padding: 10px;
+  }
+
   & form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
     gap: 20px;
     height: auto;
     width: auto;
