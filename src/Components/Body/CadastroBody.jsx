@@ -12,8 +12,8 @@ const CadastroBody = () => {
             <h1>Cadastro</h1>
             <input type="text" placeholder="Nome completo"/>
             <input type="text" placeholder="E-mail"/>
-            <input type="passord" placeholder="Senha"/>
-            <input type="passord" placeholder="Confirmar senha"/>
+            <input type="password" placeholder="Senha"/>
+            <input type="password" placeholder="Confirmar senha"/>
             <div
             className={styles.Number}>
                 <input className={styles.ddd} type="number" placeholder="DDD" />

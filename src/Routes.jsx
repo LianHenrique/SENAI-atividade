@@ -3,6 +3,7 @@ import Home from "./Pages/Home/Home"
 import Cadastro from "./Pages/Cadastro/Cadastro"
 import Historia from "./Pages/Hitoria/Historia"
 import InitApp from "./Pages/InitApp"
+import SobreCurso from "./Pages/SobreCurso/SobreCurso"
 
 const Routes = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const Routes = createBrowserRouter([
                 path: "/historia",
                 element: <Historia />,
             },
+            {
+                path: "/sobrecurso/:id",
+                element: <SobreCurso />
+            }
         ]
     }
 ])
