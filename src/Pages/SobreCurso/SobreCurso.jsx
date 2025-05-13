@@ -1,13 +1,22 @@
+import { useLocation } from 'react-router'
 import CursoBody from '../../Components/Body/CursoBody'
-import { useParams } from 'react-router'
+import Cabecalho from '../../Components/Cabecalho/Cabecalho'
 
 const SobreCurso = () => {
-
-    const { id } = useParams()
+  const { state } = useLocation()
+  const { img, desc, titulo, tempo, geral, materia } = state || {}
 
   return (
     <div>
-        <CursoBody id={id} />
+      <Cabecalho />
+      <CursoBody 
+      img={img}
+      desc={desc}
+      titulo={titulo}
+      tempo={tempo}
+      geral={geral}
+      materia={materia}
+    />
     </div>
   )
 }

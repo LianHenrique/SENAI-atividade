@@ -27,7 +27,7 @@ const Routes = createBrowserRouter([
                 element: <Historia />,
             },
             {
-                path: "/sobrecurso/:id",
+                path: "/sobrecurso/sobre",
                 element: <SobreCurso />
             }
         ]

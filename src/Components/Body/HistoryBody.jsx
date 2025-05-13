@@ -1,6 +1,10 @@
+import { useNavigate } from "react-router"
 import styles from "../Components.module.css"
 
 const HistoryBody = () => {
+
+  const navigate = useNavigate()
+
   return (
     <div
     className={styles.fundo}>
@@ -59,13 +63,35 @@ const HistoryBody = () => {
             className={styles.pHist}>
             As primeiras escolas do SENAI foram criadas no Rio de Janeiro (então capital do Brasil) e em São Paulo, que já concentravam boa parte da produção industrial. As primeiras áreas de formação foram:
             <br /><br />
-            * <a href="">Mecânica</a>
+            * <button 
+                onClick={() => {
+                  navigate("/sobrecurso/sobre", {
+                    state: {
+                      img: "https://escotec.com.br/wp-content/uploads/2023/01/Curso-Mecanica-de-Autos-2.0.jpg",
+                      desc: "Capacita profissionais para trabalhar com manutenção e montagem de sistemas mecânicos, com foco prático e técnico.",
+                      titulo: "Técnico mecanica",
+                    }
+                  })
+                }}>
+                Mecânica
+              </button>
             <br />
             * Construção civil
             <br />
             * Marcenaria
             <br />
-            * <a href="">Eletricidade</a>
+            * <button 
+                onClick={() => {
+                  navigate("/sobrecurso/sobre", {
+                    state: {
+                      img: "https://cms.fiemt.ind.br/arquivos/senai/images/conteudos/img-destaque/Eletrot%C3%A9cnica.jpg",
+                      desc: "Forma profissionais para atuar na instalação, manutenção e operação de sistemas elétricos em residências, indústrias e comércios.",
+                      titulo: "Técnico eletrotécnica",
+                    }
+                  })
+                }}>
+                  Eletricidade
+                </button>
             <br />
             * Siderurgia
             <br />
