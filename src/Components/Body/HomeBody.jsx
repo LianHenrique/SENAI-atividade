@@ -1,7 +1,46 @@
+import { useContext, useEffect, useState } from "react"
 import CardCurso from "../CardCurso/CardCurso"
 import styles from "../Components.module.css"
+import { AuthContext } from "../../Context/UserContext"
+import { useVerificaLogin } from "../../Hook/useAPI"
+import { useForm } from "react-hook-form"
+import { useNavigate } from "react-router"
 
 const HomeBody = () => {
+  const [alertClass, setAlertClass] = useState("mb-5 d-none")
+  const [alertMenssage, setAlertMenssage] = useState("")
+
+  const { verificaLogin } = useVerificaLogin()
+
+  const navigate = useNavigate()
+
+  const {
+    register,
+    handleSubmit,
+    formState: {errors}
+  } = useForm()
+
+  const onSubmit = (data) => {
+
+    console.log(data)
+
+    const respVerifica = verificaLogin(data)
+
+    if(respVerifica == "Login bem sucedido"){
+      alert(respVerifica)
+      navigate("/home")
+    }
+    else{
+      setAlertClass("mb-5 mt-2")
+      setAlertMenssage(respVerifica)
+    }
+
+  }
+
+  const onError = (erros) => {
+    console.log(erros)
+  }
+
   return (
     <div
     className={styles.fundo}>
@@ -9,7 +48,6 @@ const HomeBody = () => {
         <iframe
           src="https://www.youtube.com/embed/FK6Uctz8_VQ?autoplay=1&mute=1&vq=hd1080&loop=1&playlist=FK6Uctz8_VQ"
           title="Vídeo de introdução SENAI"
-          frameBorder="0"
           allow="autoplay; encrypted-media;"
           allowFullScreen
         ></iframe>
@@ -25,10 +63,40 @@ const HomeBody = () => {
         </div>
         <div 
         className={styles.Form}>
-          <form action="">
-            <input type="text" placeholder="Login"/>
-            <input type="password" name="" id="" placeholder="Senha"/>
-            <button type="button">Entrar</button>
+          <form
+          onSubmit={handleSubmit(onSubmit, onError)}
+          action="">
+            <input type="text" 
+            {
+              ... register("email", {
+              required: "Email obrigatorio",
+              pattern: {
+                value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,
+                message: "Email invalido"
+                },
+              validate: (value) => value.includes("@") || "Email invalido"
+            })} 
+            placeholder="Login"/>
+            {
+              errors.email && 
+              <p className="error">
+                { errors.email.message }
+              </p>
+              }
+            <input type="password"
+            {
+              ... register("senha", {
+                required: "Senha é obrigatoria"
+              })
+            }
+            placeholder="Senha"/>
+            {
+              errors.senha && 
+              <p className="error">
+                { errors.senha.message }
+              </p>
+            }
+            <button type="submit">Entrar</button>
             <a href="/cadastro">Cadastre-se</a>
           </form>
           <div 
