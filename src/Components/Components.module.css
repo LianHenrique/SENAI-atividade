@@ -673,3 +673,68 @@
     }
   }
 }
+
+@media (max-width: 768px){
+  .CursoBody{
+    display: flex;
+    flex-direction: column;
+    & .sobre{
+      margin: 0;
+      max-width: 100%;
+      & h1{
+        margin: 0 10px;
+        padding: 5px;
+        background-color: #20298F;
+        border-radius: 5px;
+        color: white;
+        font-size: 25px;
+      }
+      & p{
+        text-align: justify;
+        margin: 10px 10px 30px;
+      }
+    }
+    & .Resumo{
+      height: 100vh;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+      margin-top: 152px;
+      position: initial;
+      max-width: 100%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+  
+      & img{
+        margin: 10px;
+        height: 250px;
+        border-radius: 5px;
+      }
+      & div{
+        & h1{
+          margin: 0 10px 5px 10px;
+          color: white;
+          padding: 5px;
+          border-radius: 5px;
+          background-color: #20298F;
+          font-size: 25px;
+        }
+        & p{
+          margin: 0 10px;
+          text-align: justify;
+        }
+      }
+      & h2{
+        margin: 0 20px 20px;
+        font-size: 25px;
+      }
+      & .ButtonAssinatura{
+        margin: 50px auto 5px;
+        height: 50px;
+        width: 90%;
+      }
+      & .ButtonAssinatura:hover{
+        box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
