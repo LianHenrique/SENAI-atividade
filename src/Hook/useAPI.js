@@ -43,3 +43,18 @@ export function useVerificaLogin () {
     return { verificaLogin }
 
 }
+
+export function useInserirUsuario(){
+    const inserirUsuario = async (data) => {
+        const req = await fetch(`${url}usuarios`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data)
+        })
+        const res = await req.json()
+        return res
+    }
+    return { inserirUsuario }
+}

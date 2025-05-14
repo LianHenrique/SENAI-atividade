@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router'
 import CursoBody from '../../Components/Body/CursoBody'
 import Cabecalho from '../../Components/Cabecalho/Cabecalho'
+import Footer from '../../Components/Footer/Footer'
 
 const SobreCurso = () => {
   const { state } = useLocation()
