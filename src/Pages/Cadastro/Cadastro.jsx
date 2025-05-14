@@ -1,5 +1,6 @@
 import CadastroBody from "../../Components/Body/CadastroBody"
 import Cabecalho from "../../Components/Cabecalho/Cabecalho"
+import Footer from "../../Components/Footer/Footer"
 import styles from "../App.module.css"
 
 const Cadastro = () => {
@@ -7,6 +8,7 @@ const Cadastro = () => {
     <div>
       <Cabecalho />
       <CadastroBody />
+      <Footer />
     </div>
   )
 }
