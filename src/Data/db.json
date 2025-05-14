@@ -30,6 +30,14 @@
       "senha": "lucas",
       "confirmaSenha": "lucas",
       "telefone": "27992533438"
+    },
+    {
+      "id": "803b",
+      "nome": "Cheddar Duplo",
+      "email": "chedarduplowesley@gmail.com",
+      "senha": "http://localhost:51",
+      "confirmaSenha": "http://localhost:51",
+      "telefone": "5"
     }
   ]
 }
