@@ -1,10 +1,19 @@
 {
-    "usuarios":[
-        {
-            "id":"1",
-            "nome":"ADM",
-            "email":"ADM@gmail.com",
-            "senha":"777"
-        }
-    ]
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "ADM",
+      "email": "ADM@gmail.com",
+      "senha": "777",
+      "telefone": "27992345234"
+    },
+    {
+      "id": "6e56",
+      "nome": "Lian Henrique Amarante Fernandes Silva",
+      "email": "lianhenrique1902@gmail.com",
+      "senha": "lian1902",
+      "confirmaSenha": "lian1902",
+      "telefone": "27992533438"
+    }
+  ]
 }
