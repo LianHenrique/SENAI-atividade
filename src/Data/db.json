@@ -14,6 +14,22 @@
       "senha": "lian1902",
       "confirmaSenha": "lian1902",
       "telefone": "27992533438"
+    },
+    {
+      "id": "d0b0",
+      "nome": "Lian Henrique",
+      "email": "lian@gmail.com",
+      "senha": "lian123",
+      "confirmaSenha": "lian123",
+      "telefone": "27992533438"
+    },
+    {
+      "id": "0cef",
+      "nome": "Lucas",
+      "email": "lucas@gmail.com",
+      "senha": "lucas",
+      "confirmaSenha": "lucas",
+      "telefone": "27992533438"
     }
   ]
 }
