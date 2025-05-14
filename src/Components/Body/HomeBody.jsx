@@ -7,10 +7,8 @@ import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router"
 
 const HomeBody = () => {
-  const [alertClass, setAlertClass] = useState("mb-5 d-none")
-  const [alertMenssage, setAlertMenssage] = useState("")
 
-  const { verificaLogin } = useVerificaLogin()
+  const { verificaLogin } = useVerificaLogin(AuthContext)
 
   const navigate = useNavigate()
 
@@ -137,7 +135,7 @@ const HomeBody = () => {
         },
         {
           img:
-          "https://i1.wp.com/elaborata.com.br/blog/wp-content/uploads/2018/06/curso-te%CC%81cnico-e1476051467658.jpg?resize=433%2C300&ssl=1",
+          "https://i2.wp.com/www.elaborata.com.br/blog/wp-content/uploads/2018/06/tecninco-em-informatica-guiatech.jpg?fit=1200%2C800&ssl=1",
           desc:
           "Capacita profissionais para montar, configurar, fazer manutenção e reparar computadores e equipamentos eletrônicos.",
           nome:

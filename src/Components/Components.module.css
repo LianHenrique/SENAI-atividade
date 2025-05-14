@@ -610,7 +610,7 @@
   gap: 2rem;
   & .plataforma{
     & .sobre{
-      margin: 150px 10px 10px 485px;
+      margin: 160px 10px 10px 485px;
       max-width: 50%;
       flex: 1;
       & h1{
